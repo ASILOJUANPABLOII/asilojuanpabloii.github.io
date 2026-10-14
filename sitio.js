@@ -25,9 +25,32 @@
     if (S.whatsapp) el.href = "https://wa.me/" + S.whatsapp;
     else el.style.display = "none";
   });
-  document.querySelectorAll("[data-donar]").forEach(function (el) {
+  // Botón de Stripe (sección "Dona ahora")
+  document.querySelectorAll("[data-stripe]").forEach(function (el) {
     if (S.linkDonacion) { el.href = S.linkDonacion; el.target = "_blank"; el.rel = "noopener"; }
-    else { el.href = "#contacto"; el.title = "Enlace de donación en configuración"; }
+    else { el.classList.add("deshabilitado"); el.removeAttribute("href"); el.textContent = "Pago con tarjeta disponible muy pronto"; }
+  });
+  // Oculta la opción de transferencia mientras no haya CLABE capturada
+  if (!S.clabe || S.clabe.indexOf("[") !== -1) {
+    document.querySelectorAll(".opcion.transferencia").forEach(function (el) {
+      el.style.display = "none";
+      if (el.parentElement) el.parentElement.style.gridTemplateColumns = "minmax(0, 520px)";
+      if (el.parentElement) el.parentElement.style.justifyContent = "center";
+    });
+  }
+  // Botón de PayPal: se oculta si no hay enlace
+  document.querySelectorAll("[data-paypal]").forEach(function (el) {
+    if (S.linkPaypal) { el.href = S.linkPaypal; el.target = "_blank"; el.rel = "noopener"; }
+    else { var b = el.closest("[data-paypal-bloque]") || el; b.style.display = "none"; }
+  });
+  // Botones para copiar CLABE, etc.
+  document.querySelectorAll("[data-copiar]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var v = (S[btn.getAttribute("data-copiar")] || "").replace(/\s/g, "");
+      var listo = function () { var t = btn.textContent; btn.textContent = "¡Copiado!"; setTimeout(function () { btn.textContent = t; }, 1600); };
+      if (navigator.clipboard) navigator.clipboard.writeText(v).then(listo, function () { window.prompt("Copia este dato:", v); });
+      else window.prompt("Copia este dato:", v);
+    });
   });
   var y = document.getElementById("anio");
   if (y) y.textContent = new Date().getFullYear();

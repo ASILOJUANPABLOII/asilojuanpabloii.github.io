@@ -120,3 +120,30 @@ body { overflow-x: hidden; }
 .galeria figure { aspect-ratio: 4/5; }
 .galeria img { object-position: center 30%; }
 .foto img { max-height: 460px; object-position: center 35%; }
+
+/* Sección Dona ahora */
+.franja-donar .contenedor > p { max-width: 640px; margin: 0 auto 28px; }
+.opciones-donar { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; max-width: 900px; margin: 0 auto; }
+@media (max-width: 760px) { .opciones-donar { grid-template-columns: 1fr; } }
+.opcion { background: #fff; border-radius: 18px; padding: 24px; box-shadow: 0 6px 22px rgba(0,0,0,.08); border-top: 6px solid var(--rojo); }
+.opcion.transferencia { border-top-color: var(--azul); }
+.opcion h3 { font-size: 21px; margin: 0 0 6px; }
+.opcion .nota { color: var(--suave); font-size: 15px; margin: 0 0 16px; }
+.boton-bloque { display: block; text-align: center; width: 100%; font-size: 18px; padding: 16px; }
+.boton.deshabilitado { background: #cfc8bd; box-shadow: none; cursor: default; pointer-events: none; }
+.metodos { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.metodos span { background: var(--crema); border: 1px solid #e6dfcf; border-radius: 999px; padding: 4px 12px; font-size: 14px; font-weight: 700; }
+.sello { display: inline-block; background: #e7f6ec; color: #1d6b3a; font-weight: 800; font-size: 13px; border-radius: 999px; padding: 3px 12px; margin-bottom: 10px; }
+.dato { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #eee6d6; }
+.dato:last-of-type { border-bottom: 0; }
+.dato small { display: block; color: var(--suave); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; }
+.dato strong { font-size: 16px; overflow-wrap: anywhere; }
+.dato .clabe { font-family: ui-monospace, Consolas, monospace; font-size: 18px; letter-spacing: .05em; }
+.copiar { flex-shrink: 0; background: var(--azul-osc); color: #fff; border: 0; border-radius: 10px; padding: 9px 14px; font-weight: 800; font-family: inherit; cursor: pointer; }
+.franja-donar .deducible { margin: 24px auto 0; font-size: 15px; }
+section[id] { scroll-margin-top: 84px; }
+.franja-donar p.deducible { margin-top: 26px; }
+
+.paypal { margin-top: 18px; padding-top: 16px; border-top: 1px solid #eee6d6; }
+.paypal .nota { margin-bottom: 10px; }
+.boton.boton-paypal { background: #ffc439; color: #142c8e !important; box-shadow: 0 4px 14px rgba(255,196,57,.35); }

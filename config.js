@@ -18,7 +18,15 @@ window.SITIO = {
   rfc: "AAA940610LS3",
 
   // Pega aquí el enlace de pago de Stripe cuando lo tengas (empieza con https://buy.stripe.com/...)
-  linkDonacion: "",
+  linkDonacion: "https://donate.stripe.com/aFabJ2cjrdSB7eBaL89EI01",
+
+  // Enlace de donación de PayPal (PayPal.me o botón "Donar"). Déjalo vacío para ocultar la opción.
+  linkPaypal: "",
+
+  // Datos para transferencia (SPEI) sin comisión
+  banco: "[BANCO]",
+  titularCuenta: "Asilo de Ancianos Aida S. de Rodríguez I.A.P.",
+  clabe: "[CLABE DE 18 DÍGITOS]",
 
   fechaPoliticas: "13 de octubre de 2026"
 };

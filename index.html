@@ -26,7 +26,7 @@
       <a href="#mision">Misión</a>
       <a href="#ayudar">Cómo ayudar</a>
       <a href="#contacto">Contacto</a>
-      <a class="boton" href="#contacto" data-donar>Donar</a>
+      <a class="boton" href="#donar" data-donar>Donar</a>
     </nav>
   </div>
 </header>
@@ -40,7 +40,7 @@
       <h1>Una vejez digna para quienes más lo necesitan</h1>
       <p>Somos una casa hogar sin fines de lucro que brinda asistencia integral a personas adultas mayores de escasos recursos. Tu donativo se convierte en alimento, cuidados y compañía.</p>
       <div class="acciones">
-        <a class="boton grande" href="#contacto" data-donar>Donar ahora</a>
+        <a class="boton grande" href="#donar" data-donar>Donar ahora</a>
         <a class="boton grande secundario" href="#historia">Conócenos</a>
       </div>
       </div>
@@ -106,7 +106,7 @@
           <div class="icono" aria-hidden="true">💛</div>
           <h3>Donativo en línea</h3>
           <p>Dona de forma segura con tarjeta de crédito o débito. El pago se procesa a través de Stripe; nosotros nunca vemos ni guardamos los datos de tu tarjeta.</p>
-          <a class="boton" href="#contacto" data-donar>Donar</a>
+          <a class="boton" href="#donar" data-donar>Donar</a>
         </div>
         <div class="tarjeta">
           <div class="icono" aria-hidden="true">🧺</div>
@@ -137,11 +137,35 @@
     </div>
   </section>
 
-  <section class="franja-donar">
+  <section id="donar" class="franja-donar">
     <div class="contenedor">
-      <h2>Cada donativo cuenta</h2>
-      <p>Con tu apoyo seguimos cuidando a nuestros abuelos como lo hemos hecho desde 1936. Puedes hacer un donativo único de la cantidad que tú elijas.</p>
-      <a class="boton grande" href="#contacto" data-donar>Quiero donar</a>
+      <h2>Dona ahora</h2>
+      <p>Con tu apoyo seguimos cuidando a nuestros abuelos como lo hemos hecho desde 1936. Escribe la cantidad que quieras donar y listo.</p>
+      <div class="opciones-donar">
+        <div class="opcion">
+          <h3>Con tarjeta, Apple Pay, Google Pay u OXXO</h3>
+          <p class="nota">Rápido y seguro. Tú eliges la cantidad. El pago se procesa con Stripe.</p>
+          <div class="metodos"><span>💳 Tarjeta</span><span>📱 Apple Pay</span><span>📱 Google Pay</span><span>🏪 OXXO</span></div>
+          <a class="boton boton-bloque" href="#" data-stripe>Donar ahora</a>
+          <div class="paypal" data-paypal-bloque>
+            <p class="nota">¿Prefieres PayPal?</p>
+            <a class="boton boton-bloque boton-paypal" href="#" data-paypal>Donar con PayPal</a>
+          </div>
+        </div>
+        <div class="opcion transferencia">
+          <span class="sello">✓ Sin comisión: llega el 100 %</span>
+          <h3>Por transferencia</h3>
+          <p class="nota">Desde la app de tu banco, por SPEI, a esta cuenta:</p>
+          <div class="dato"><div><small>Banco</small><strong data-campo="banco">[BANCO]</strong></div></div>
+          <div class="dato"><div><small>A nombre de</small><strong data-campo="titularCuenta">Asilo de Ancianos Aida S. de Rodríguez I.A.P.</strong></div></div>
+          <div class="dato">
+            <div><small>CLABE</small><strong class="clabe" data-campo="clabe">[CLABE DE 18 DÍGITOS]</strong></div>
+            <button class="copiar" type="button" data-copiar="clabe">Copiar</button>
+          </div>
+          <div class="dato"><div><small>Concepto</small><strong>Donativo</strong></div></div>
+        </div>
+      </div>
+      <p class="deducible">¿Necesitas recibo deducible? Envía tu comprobante y datos fiscales a <a href="mailto:asilojuanpablohermosillo@gmail.com" data-correo>asilojuanpablohermosillo@gmail.com</a></p>
     </div>
   </section>
 
