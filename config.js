@@ -24,9 +24,9 @@ window.SITIO = {
   linkPaypal: "",
 
   // Datos para transferencia (SPEI) sin comisión
-  banco: "[BANCO]",
+  banco: "BBVA",
   titularCuenta: "Asilo de Ancianos Aida S. de Rodríguez I.A.P.",
-  clabe: "[CLABE DE 18 DÍGITOS]",
+  clabe: "012 760 00143950700 3",
 
   fechaPoliticas: "13 de octubre de 2026"
 };
