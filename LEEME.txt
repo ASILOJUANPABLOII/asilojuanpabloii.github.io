@@ -1,0 +1,5 @@
+Coloca aquí las imágenes con estos nombres exactos (minúsculas):
+  logo.png            -> logotipo del asilo
+  foto-principal.jpg  -> foto junto a "Nuestra historia"
+  galeria-1.jpg ... galeria-6.jpg -> fotos de la galería (puedes poner menos de 6)
+Si alguna falta, el sitio simplemente la oculta.

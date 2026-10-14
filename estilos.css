@@ -1,0 +1,122 @@
+:root {
+  --azul: #1f3f7a;
+  --azul-osc: #5b3a32;
+  --cafe: #6d4a42;
+  --amarillo: #f2b925;
+  --rojo: #c8372d;
+  --crema: #fbf7ef;
+  --texto: #2a2a2a;
+  --suave: #5d6470;
+  --blanco: #ffffff;
+  --radio: 14px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--texto);
+  background: var(--crema);
+  line-height: 1.65;
+  font-size: 17px;
+}
+h1, h2, h3 { font-family: "Merriweather", Georgia, serif; color: var(--azul-osc); line-height: 1.25; }
+a { color: var(--azul); }
+img { max-width: 100%; display: block; }
+.contenedor { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+/* Encabezado */
+.cabecera { background: var(--blanco); border-bottom: 4px solid var(--amarillo); position: sticky; top: 0; z-index: 10; }
+.cabecera .contenedor { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 10px; padding-bottom: 10px; }
+.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--azul-osc); font-weight: 800; font-family: "Merriweather", Georgia, serif; }
+.marca img { height: 58px; width: auto; }
+.nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.nav a { text-decoration: none; color: var(--texto); font-weight: 600; font-size: 15px; }
+.nav a:hover { color: var(--azul); }
+@media (max-width: 760px) { .nav a:not(.boton) { display: none; } }
+
+/* Botones */
+.boton {
+  display: inline-block; background: var(--rojo); color: var(--blanco) !important;
+  padding: 12px 24px; border-radius: 999px; text-decoration: none; font-weight: 800;
+  box-shadow: 0 4px 14px rgba(200, 55, 45, .25); transition: transform .15s;
+}
+.boton:hover { transform: translateY(-2px); }
+.boton.grande { font-size: 19px; padding: 15px 34px; }
+.boton.secundario { background: var(--blanco); color: var(--azul-osc) !important; box-shadow: none; border: 2px solid var(--blanco); }
+
+/* Portada */
+.portada {
+  background: linear-gradient(135deg, #4a2e27, var(--cafe));
+  color: var(--blanco); padding: 80px 0 90px; position: relative; overflow: hidden;
+}
+.portada::after {
+  content: ""; position: absolute; right: -120px; bottom: -120px; width: 360px; height: 360px;
+  border-radius: 50%; background: var(--amarillo); opacity: .14;
+}
+.portada h1 { color: var(--blanco); font-size: clamp(32px, 5vw, 52px); margin: 0 0 16px; }
+.portada p { font-size: 20px; max-width: 640px; opacity: .95; }
+.etiqueta { display: inline-block; background: var(--amarillo); color: var(--azul-osc); font-weight: 800; padding: 4px 14px; border-radius: 999px; font-size: 14px; margin-bottom: 18px; }
+.acciones { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+
+/* Secciones */
+section { padding: 72px 0; }
+section.blanca { background: var(--blanco); }
+.titulo-seccion { font-size: clamp(26px, 3.5vw, 36px); margin: 0 0 8px; }
+.linea { width: 70px; height: 5px; background: var(--amarillo); border-radius: 3px; margin-bottom: 28px; }
+.dos-col { display: grid; grid-template-columns: 1.2fr 1fr; gap: 44px; align-items: center; }
+@media (max-width: 820px) { .dos-col { grid-template-columns: 1fr; } }
+.foto { border-radius: var(--radio); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+.foto img { width: 100%; height: 100%; object-fit: cover; }
+
+.mision {
+  background: var(--blanco); border-left: 6px solid var(--amarillo); border-radius: var(--radio);
+  padding: 34px 38px; font-family: "Merriweather", Georgia, serif; font-style: italic;
+  font-size: clamp(20px, 2.6vw, 26px); color: var(--azul-osc); box-shadow: 0 6px 24px rgba(0,0,0,.06);
+}
+
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+.tarjeta { background: var(--crema); border-radius: var(--radio); padding: 28px; border-top: 5px solid var(--azul); }
+.tarjeta:nth-child(2) { border-top-color: var(--amarillo); }
+.tarjeta:nth-child(3) { border-top-color: var(--rojo); }
+.tarjeta h3 { margin-top: 0; }
+.icono { font-size: 34px; margin-bottom: 8px; }
+
+.galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.galeria figure { margin: 0; border-radius: var(--radio); overflow: hidden; aspect-ratio: 4/3; background: #e9e4d8; }
+.galeria img { width: 100%; height: 100%; object-fit: cover; }
+
+.franja-donar { background: var(--amarillo); text-align: center; }
+.franja-donar h2 { margin-top: 0; }
+.franja-donar p { max-width: 640px; margin: 0 auto 24px; }
+
+.fiscal { background: var(--blanco); border: 1px solid #e6dfcf; border-radius: var(--radio); padding: 26px 30px; }
+.fiscal dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 0; }
+.fiscal dt { font-weight: 800; color: var(--suave); }
+.fiscal dd { margin: 0; }
+
+.contacto-lista { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; font-size: 18px; }
+
+/* Pie */
+.pie { background: var(--azul-osc); color: #d8deea; padding: 40px 0; font-size: 15px; }
+.pie a { color: var(--blanco); }
+.pie .contenedor { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
+
+/* Páginas legales */
+.legal { max-width: 800px; padding-top: 50px; padding-bottom: 70px; }
+.legal h1 { font-size: 34px; }
+.legal h2 { font-size: 22px; margin-top: 34px; }
+section:not(.blanca) .tarjeta { background: var(--blanco); }
+.contacto-lista, .fiscal, .legal { overflow-wrap: anywhere; }
+.portada { overflow-x: clip; }
+body { overflow-x: hidden; }
+
+.portada-grid { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; position: relative; z-index: 1; }
+.logo-portada { background: #fff; border-radius: 18px; padding: 18px; box-shadow: 0 12px 34px rgba(0,0,0,.25); }
+.logo-portada img { width: 200px; height: auto; }
+@media (max-width: 760px) { .portada-grid { grid-template-columns: 1fr; } .logo-portada { justify-self: center; order: -1; } .logo-portada img { width: 140px; } }
+.franja-tricolor { height: 8px; background: linear-gradient(90deg, var(--rojo) 0 25%, var(--amarillo) 25% 50%, var(--azul) 50% 75%, #6b4f9e 75% 100%); }
+.galeria { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.galeria figure { aspect-ratio: 4/5; }
+.galeria img { object-position: center 30%; }
+.foto img { max-height: 460px; object-position: center 35%; }
